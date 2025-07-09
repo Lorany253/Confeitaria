@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lindo Doce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="website icon" type="png" href="img/logo01.png">
+</head>
+<body>
+    <header>
+        <h1>Lindo Doce</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>  
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>  
+                <li><a href="#pedido">Pedido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="banner">
+        <div class="slide"><img src="img/Lindo Doce.png"/></div>
+        <div class="slide"><img src="./img/img01.png"/></div>
+        <div class="slide"><img src="img/img02.png"/></div>
+        <div class="slide"><img src="img/img03.png"/></div>
+    </section>
+
+    <section id="home">
+  <!-- Texto principal -->
+  <div class="home-texto">
+    <h1>Delícias que abraçam o coração! 🎂💕</h1>
+    <p>
+      Bem-vindo à <strong>Lindo Doce</strong>, onde cada receita é feita com carinho, sabor e um toque de magia!
+      Nossos bolos e doces são preparados artesanalmente, para transformar momentos simples em lembranças inesquecíveis. ✨<br><br>
+      Sinta-se em casa — e sinta o sabor do amor em cada pedacinho!
+    </p>
+  </div>
+
+  <!-- Imagem decorativa -->
+  <div class="home-img">
+    <img src="./img/img04.png" alt="Logo da Confeitaria">
+  </div>
+</section>
+
+<h2>Galeria</h2>
+<section id="galeria">
+  <div class="galeria-container">
+    <div class="img-grande">
+      <img src="./img/img05.png" alt="Imagem grande destaque">
+    </div>
+    <div class="img-pequenas">
+      <img src="./img/Img06.png" alt="Imagem 06">
+      <img src="./img/Img07.png" alt="Imagem 07">
+      <img src="./img/Img08.png" alt="Imagem 08">
+    </div>
+  </div>
+</section>
+
+<section id="cardapio" class="doce-cardapio">
+  <button onclick="abrirPedido()">🍓 Faça já seu pedido!</button>
+
+  <div class="filtros">
+    <button onclick="filtrarCategoria('todos')">Todos</button>
+    <button onclick="filtrarCategoria('bolos')">Bolos</button>
+    <button onclick="filtrarCategoria('doces')">Doces</button>
+    <button onclick="filtrarCategoria('salgado')">Salgados</button>
+  </div>
+
+  <h2>Cardápio</h2>
+
+  <div class="doce-container">
+    <!-- Naked Cake -->
+    <div class="doce bolos">
+      <img src="img/imgnck.png" alt="Naked Cake">
+      <div id="sabores-naked">
+        <label><input type="checkbox" value="Chocolate"> Chocolate</label>
+        <label><input type="checkbox" value="Choconinho"> Choconinho</label>
+        <label><input type="checkbox" value="Ninho"> Ninho</label>
+        <label><input type="checkbox" value="Red Velvet"> Red Velvet</label>
+        <label><input type="checkbox" value="Doce de Leite"> Doce de Leite</label>
+      </div>
+      <button onclick="adicionarSabores('Naked Cake', 'sabores-naked')">Adicionar ao carrinho</button>
+    </div>
+
+    <!-- Bolo Confeitado -->
+    <div class="doce bolos">
+      <img src="img/imgconft.png" alt="Bolo Confeitado">
+      <button onclick="adicionarSabores('Bolo Confeitado')">Adicionar ao carrinho</button>
+    </div>
+
+    <!-- Doces de Festa -->
+    <div class="doce doces">
+      <img src="img/imgdcfest.png" alt="Doces de Festa">
+      <div id="sabores-doces-festa">
+        <label><input type="checkbox" value="Brigadeiro"> Brigadeiro</label>
+        <label><input type="checkbox" value="Beijinho"> Beijinho</label>
+        <label><input type="checkbox" value="Doce de Ninho"> Doce de Ninho</label>
+        <label><input type="checkbox" value="Bicho de Pé"> Bicho de Pé</label>
+        <label><input type="checkbox" value="Casadinho"> Casadinho</label>
+        <label><input type="checkbox" value="Empadinha Doce"> Empadinha Doce</label>
+      </div>
+      <button onclick="adicionarSabores('Doces de Festa', 'sabores-doces-festa')">Adicionar ao carrinho</button>
+    </div>
+    <!-- Sobremessas -->
+    <div class="doce doces">
+      <img src="img/imgsbrms.png" alt="Sobremessas">
+      <div id="sabores-sobremessas">
+        <label><input type="checkbox" value="Brownie"> Brownie</label>
+        <label><input type="checkbox" value="Copo da Felicidade"> Copo da Felicidade</label>
+        <label><input type="checkbox" value="Pudim"> Pudim</label>
+      </div>
+      <button onclick="adicionarSabores('Sobremessas', 'sabores-sobremessas')">Adicionar ao carrinho</button>
+    </div>
+
+    <!-- Salgados de Padaria -->
+    <div class="doce salgado">
+      <img src="img/imgslgpd.png" alt="Salgados de Padaria">
+      <div id="sabores-salgados-padaria">
+        <label><input type="checkbox" value="Coxinha"> Coxinha</label>
+        <label><input type="checkbox" value="Empada"> Empada</label>
+        <label><input type="checkbox" value="Enroladinho de Salsinha"> Enroladinho de Salsicha</label>
+        <label><input type="checkbox" value="Bolinha de Queijo"> Bolinha de Queijo</label>
+        <label><input type="checkbox" value="Pastel"> Pastel</label>
+        <label><input type="checkbox" value="Torta"> Torta</label>
+        <label><input type="checkbox" value="Joelho Misto"> Joelho Misto</label>
+        <label><input type="checkbox" value="Pão de Queijo"> Pão de Queijo</label>
+      </div>
+      <button onclick="adicionarSabores('Salgados de Padaria', 'sabores-salgados-padaria')">Adicionar ao carrinho</button>
+    </div>
+
+    <!-- Salgados de Festa -->
+    <div class="doce salgado">
+      <img src="img/imgslgfst.png" alt="Salgados de Festa">
+      <div id="sabores-salgados-festa">
+        <label><input type="checkbox" value="Coxinha"> Coxinha</label>
+        <label><input type="checkbox" value="Bolinha de Queijo"> Bolinha de Queijo</label>
+        <label><input type="checkbox" value="Mini Enroladinho"> Mini Enroladinho</label>
+        <label><input type="checkbox" value="Mini Risole"> Mini Risole</label>
+        <label><input type="checkbox" value="Pastelzinho"> Pastelzinho</label>
+      </div>
+      <button onclick="adicionarSabores('Salgados de Festa', 'sabores-salgados-festa')">Adicionar ao carrinho</button>
+    </div>
+  </div>
+
+<!-- Botão "Ver Pedido" -->
+  <div class="ver-pedido">
+<h3>Finalizou seu<br><span>Pedido?</span></h3>
+<p>Vamos ver como ficou!</p>
+<button onclick="document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })">
+🍰 Ver Pedido
+</button>
+</div>
+</section>
+
+
+    <section id="contato">
+  <h2>Pedido</h2>
+  <form id="formContato">
+      <input type="text" id="nome" placeholder="Seu Nome" required>
+
+      <!-- Campo que mostra os produtos escolhidos -->
+      <textarea id="produtosSelecionados" placeholder="Produtos selecionados..." readonly required></textarea>
+
+      <!-- Campo onde o cliente pode personalizar -->
+      <textarea id="pedido" placeholder="Detalhes adicionais do pedido (opcional)"></textarea>
+
+      <button type="button" onclick="enviarParaWhatsApp()">
+        <i class="fab fa-whatsapp"></i> Enviar</button>
+      <button type="button" onclick="copiarEIrParaInstagram()">
+        <i class="fab fa-instagram"></i> Enviar</button>
+  </form>
+</section>
+
+    <footer>
+        <p>&copy; 2025 Venda de Doces. Todos os direitos reservados @lindo_doce</p>
+    </footer>
+
+    <button id="btnTopo" title="Voltar ao topo">⬆</button>
+    <script src="script.js"></script>
+</body>
+</html>
