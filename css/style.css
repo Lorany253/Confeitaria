@@ -1,0 +1,525 @@
+body {
+ background: url(https://img.freepik.com/vetores-gratis/fundo-de-aquarela-rosa-pintado-a-mao-detalhado_1048-17039.jpg);
+}
+h2{
+    height: 50px;
+    font-size: 30px;
+    color: rgb(255, 0, 157, 0.795);
+    text-align: center;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    font-size: 200%;
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Times New Roman', Times, serif;
+}
+
+header{
+    background-image: url(https://img.freepik.com/vetores-gratis/fundo-de-aquarela-rosa-pintado-a-mao-detalhado_1048-17039.jpg);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a{
+    color: rgba(255, 0, 157, 0.795);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#banner{
+    margin-top: 40px;
+    display: flex;
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+    z-index: 1;  
+}
+
+/* Estilo da seção Home */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 10%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Texto à esquerda */
+#home .home-texto {
+  max-width: 600px;
+  color: #6b0034;
+}
+
+#home .home-texto h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: rgba(255, 0, 157, 0.795);
+}
+
+#home .home-texto p {
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Imagem à direita */
+#home .home-img img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  #home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #home .home-img {
+    margin-top: 30px;
+  }
+}
+
+#galeria {
+  padding: 40px 10%;
+  text-align: center;
+}
+
+#galeria h2{
+    font-size: 40px;
+}
+
+.galeria-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.img-grande img {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-pequenas {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-pequenas img {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== CARDÁPIO - Estilo em Grade ========== */
+
+#cardapio .doce-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Cada item (produto) */
+#doce-cardapio .doce {
+  background: #fffafc;
+  border: 2px solid #ffd3e8;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+#doce-cardapio .doce:hover {
+  transform: scale(1.02);
+}
+
+/* Imagens padronizadas */
+#doce-container .doce img,
+#cardapio .doce img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 3px solid #ffc1e3;
+  margin-bottom: 10px;
+}
+
+/* Checkbox e texto juntos */
+#doce-cardapio .doce label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #a0005c;
+  gap: 8px;
+}
+
+/* Container de sabores */
+#doce-cardapio .doce > div {
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Botões */
+#doce-cardapio .doce button {
+  margin-top: 10px;
+  align-self: center;
+}
+
+/* Ajustes gerais */
+#doce-cardapio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+#doce-cardapio h2 {
+  text-align: center;
+  color: #d6006b;
+  margin-bottom: 30px;
+}
+.doce > div[id^="sabores-"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 5px 35px;
+  margin-top: 15px;
+}
+
+/* BOTÃO VER PEDIDO ESTILIZADO */
+.ver-pedido {
+  background-color: #ffe4f0;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: #a0005c;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+  max-width: 300px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+/* Botão superior "Faça já seu pedido!" */
+#doce-cardapio > button {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* Filtros - corrigido para o id correto */
+#cardapio .filtros {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Layout de produtos em grade responsiva */
+.doce-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: start;
+  padding: 0 20px;
+}
+
+/* Oculta produtos sem quebrar o layout */
+.oculto {
+  display: none !important;
+}
+
+#contato{
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- Seção Pedido --- */
+#contato {
+  background: transparent;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Caixa do formulário */
+#formContato {
+  background: linear-gradient(to bottom right, #ffc6e3, #ffb0d4);
+  border-radius: 20px;
+  padding: 30px 25px;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+/* Campos de entrada */
+#formContato input,
+#formContato textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  background-color: white;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+  resize: none;
+}
+
+/* Botão */
+#formContato button {
+  background-color: #ff00aa;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#formContato button:hover {
+  background-color: #e60095;
+}
+
+p{
+    text-align: center;
+}
+/* Botão "Voltar ao Topo" */
+#btnTopo {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+/* Botão de ação principal */
+button {
+  width: auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: rgba(255, 0, 157, 0.795);
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6007e;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.filtros button {
+  background-color: #ffc1e3;
+  color: #a0005c;
+  font-weight: bold;
+}
+
+/* Doce container ajustado para receber botão */
+.doce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Garantir que botões de doces fiquem bonitos */
+.doce button {
+  background-color: #fff0f5;
+  color: #ff1493;
+  border: 1px solid #ffb6c1;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.doce button:hover {
+  background-color: #ffe4ec;
+}
+
+/* Botão especial "Faça já seu pedido!" */
+button[onclick*="abrirPedido"] {
+  display: block;
+  margin: 30px auto 10px auto;
+  font-size: 18px;
+  background-color: #f08080;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+/* Checkboxes organizados em duas colunas */
+[id^="sabores-"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  justify-content: flex-start;
+  padding: 10px 0;
+  max-width: 300px;
+}
+
+[id^="sabores-"] label {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+
+/* ========== MOBILE OPTIMIZAÇÃO ========== */
+
+/* Viewport Responsivo */
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Seções principais */
+  #home,
+  #galeria,
+  #cardapio,
+  #contato {
+    padding: 20px 10px;
+  }
+
+  /* Títulos menores */
+  h1, h2 {
+    font-size: 22px !important;
+  }
+
+  /* Texto da home */
+  #home .home-texto h1 {
+    font-size: 24px;
+  }
+
+  #home .home-texto p {
+    font-size: 16px;
+  }
+
+  /* Imagens fluidas */
+  #home .home-img img,
+  .img-grande img,
+  .img-pequenas img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Galeria de produtos com 1 por linha */
+  .doce-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  /* Cards de produtos */
+  .doce {
+    padding: 15px 10px;
+  }
+
+  .doce button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* Formulário */
+  #formContato {
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+
+  #formContato input,
+  #formContato textarea,
+  #formContato button {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  /* Botão voltar ao topo menor */
+  #btnTopo {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Estilo compartilhado entre os dois banners */
+.banner {
+  margin-top: 40px;
+  display: flex;
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Esconde o banner mobile por padrão */
+#banner-mobile {
+  display: none;
+}
+
+/* Mostrar o banner mobile em telas pequenas */
+@media (max-width: 768px) {
+  #banner-desktop {
+    display: none;
+  }
+
+  #banner-mobile {
+    display: flex;
+  }
+}
