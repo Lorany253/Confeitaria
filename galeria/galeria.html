@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Lindo Doce</title>
+    <link rel="stylesheet" href="./galeria.css">
+    <link rel="website icon" type="png" href="img/logo01.png">
+
+</head>
+<body>
+    <header>
+        <h1>Lindo Doce</h1>
+    <nav>
+        <ul>
+            <li><a href="file:///C:/Users/smirn/Desktop/Seline/Meus%20Sites/Confeitaria/index.html#home">Inicio</a></li>
+            <li><a href="C:\Users\smirn\Desktop\Seline\Meus Sites\Confeitaria\galeria\galeria.html">Galeria</a></li>
+            <li><a href="file:///C:/Users/smirn/Desktop/Seline/Meus%20Sites/Confeitaria/index.html#cardapio">Cardápio</a></li>
+            <li><a href="file:///C:/Users/smirn/Desktop/Seline/Meus%20Sites/Confeitaria/index.html#pedido">Pedido</a></li>
+        </ul>
+    </nav>
+    </header>
+
+<!-- Carrossel para DESKTOP -->
+<section id="banner-desktop" class="banner">
+  <div class="slide desktop"><img src="img/Lindo Doce.png"/></div>
+  <div class="slide desktop"><img src="./img/img01.png"/></div>
+  <div class="slide desktop"><img src="img/img02.png"/></div>
+  <div class="slide desktop"><img src="img/img03.png"/></div>
+</section>
+
+<!-- Carrossel para MOBILE -->
+<section id="banner-mobile" class="banner">
+  <div class="slide mobile"><img src="img/Lindo Doce mobile.png.png"/></div>
+  <div class="slide mobile"><img src="img/mobile01.png"/></div>
+  <div class="slide mobile"><img src="img/mobile02.png"/></div>
+  <div class="slide mobile"><img src="img/mobile03.png"/></div>
+</section>
+<!-- Seção 1 -->
+  <h2>Conheça Nosso Espaço</h2>
+  <section id="galeria-grid1">
+  <div class="galeria-container">
+    <div class="img-grande">
+      <img src="./img/img05.png" alt="Imagem grande destaque">
+    </div>
+    <div class="img-pequenas">
+      <img src="./img/Img06.png" alt="Imagem 06">
+      <img src="./img/Img07.png" alt="Imagem 07">
+      <img src="./img/Img08.png" alt="Imagem 08">
+    </div>
+  </div>
+
+  <!-- Seção 2 -->
+  <h2>Aprecie Nossos Produtos</h2>
+  <div class="galeria-grid">
+    <img src="img/imgconft.png" alt="Produto 1">
+    <img src="img/imgnck.png" alt="Produto 2">
+    <img src="img/imgdcfest.png" alt="Produto 3">
+    <img src="img/imgsbrms.png" alt="Produto 4">
+    <img src="img/imgslgfst.png" alt="Produto 5">
+    <img src="img/imgslgpd.png" alt="Produto 6">
+  </div>
+
+  <!-- Botão Pedido -->
+  <div class="pedido-box">
+    <h2>Gostou do que viu?</h2>
+    <p>Vamos Fazer o Pedido!</p>
+    <button class="botao-pedido" onclick="window.location.href='file:///C:/Users/smirn/Desktop/Seline/Meus%20Sites/Confeitaria/index.html#pedido'">🍰 Pedido</button>
+  </div>
+
+  <!-- Botão voltar ao topo -->
+  <button id="btnTopo" title="Voltar ao topo">↑</button>
+
+  <script>
+  // === Carrossel para desktop/mobile ===
+let slideIndex = 0;
+let slides;
+
+function showSlides() {
+  slides.forEach((slide, index) => {
+    slide.style.opacity = (index === slideIndex) ? "1" : "0";
+  });
+  slideIndex = (slideIndex + 1) % slides.length;
+}
+
+window.addEventListener("load", () => {
+  const isMobile = window.innerWidth <= 768;
+  slides = document.querySelectorAll(`.slide.${isMobile ? "mobile" : "desktop"}`);
+
+  slides.forEach((slide, i) => {
+    slide.style.position = "absolute";
+    slide.style.top = 0;
+    slide.style.left = 0;
+    slide.style.width = "100%";
+    slide.style.height = isMobile ? "420px" : "300px";
+    slide.style.transition = "opacity 1s ease-in-out";
+    slide.style.opacity = (i === 0) ? "1" : "0";
+  });
+
+  setInterval(showSlides, 3000);
+});
+
+// === Botão voltar ao topo ===
+const btnTopo = document.getElementById("btnTopo");
+window.addEventListener("scroll", () => {
+  btnTopo.style.display = window.scrollY > 200 ? "block" : "none";
+});
+btnTopo.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+  </script>
+
+<footer>
+    <p>&copy; 2025 Venda de Doces. Todos os direitos reservados @lindo_doce</p>
+</footer>
+</body>
+</html>
